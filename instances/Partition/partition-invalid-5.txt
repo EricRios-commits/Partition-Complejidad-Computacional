@@ -1,0 +1,5 @@
+# ERROR: Mismatch between declared n (4) and actual number of elements (3)
+4
+el1 10
+el2 15
+el3 20

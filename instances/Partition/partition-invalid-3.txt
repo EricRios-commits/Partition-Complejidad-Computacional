@@ -1,0 +1,5 @@
+# ERROR: Non-numeric size value - 'abc' cannot be parsed as integer
+3
+el1 10
+el2 abc
+el3 5

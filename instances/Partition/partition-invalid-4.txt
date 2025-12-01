@@ -1,0 +1,5 @@
+# ERROR: Negative size value - element sizes must be positive
+3
+el1 10
+el2 -5
+el3 8

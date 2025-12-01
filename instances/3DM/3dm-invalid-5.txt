@@ -1,0 +1,7 @@
+# ERROR: Missing X set - empty line where X elements should be
+2
+w1 w2
+
+y1 y2
+w1 x1 y1
+w2 x2 y2

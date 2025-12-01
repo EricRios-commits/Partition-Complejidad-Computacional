@@ -1,0 +1,5 @@
+# ERROR: Duplicate element ID - 'el1' appears twice
+3
+el1 10
+el1 20
+el3 5

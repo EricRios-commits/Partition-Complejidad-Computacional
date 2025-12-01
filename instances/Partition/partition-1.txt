@@ -1,0 +1,7 @@
+5 # Number of elements in A
+el0 7 # Elements in id(string) size format
+el1 4
+el2 5
+el3 5
+el4 6
+

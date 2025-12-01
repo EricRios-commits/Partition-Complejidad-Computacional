@@ -1,0 +1,5 @@
+# ERROR: Incomplete element line - missing size value
+3
+el1 10
+el2
+el3 5

@@ -1,0 +1,6 @@
+# ERROR: Non-numeric q value - 'abc' cannot be parsed as integer
+abc
+w1 w2
+x1 x2
+y1 y2
+w1 x1 y1

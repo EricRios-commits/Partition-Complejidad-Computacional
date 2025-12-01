@@ -1,0 +1,7 @@
+# ERROR: Mismatched set sizes - X has 3 elements but W and Y have 2 (should all be q=2)
+2
+w1 w2
+x1 x2 x3
+y1 y2
+w1 x1 y1
+w2 x2 y2
