@@ -1,13 +1,13 @@
 #ifndef PARTITION_INCLUDE_REDUCTION_PIPELINE_H_
 #define PARTITION_INCLUDE_REDUCTION_PIPELINE_H_
 
-#include "InstanceReader.h"
-#include "InstanceSolver.h"
-#include "InstanceWriter.h"
-#include "PartitionInstance.h"
-#include "ReductionStrategy.h"
-#include "ThreeDMInstance.h"
-#include "Triple.h"
+#include "instance_reader.h"
+#include "instance_solver.h"
+#include "instance_writer.h"
+#include "partition_instance.h"
+#include "reduction_strategy.h"
+#include "three_d_m_instance.h"
+#include "triple.h"
 
 #include <memory>
 #include <optional>

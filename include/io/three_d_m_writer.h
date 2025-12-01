@@ -1,8 +1,8 @@
 #ifndef PARTITION_INCLUDE_THREE_DM_WRITER_H_
 #define PARTITION_INCLUDE_THREE_DM_WRITER_H_
 
-#include "InstanceWriter.h"
-#include "ThreeDMInstance.h"
+#include "instance_writer.h"
+#include "three_d_m_instance.h"
 
 #include <string>
 

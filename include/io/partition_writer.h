@@ -1,8 +1,8 @@
 #ifndef PARTITION_INCLUDE_PARTITION_WRITER_H_
 #define PARTITION_INCLUDE_PARTITION_WRITER_H_
 
-#include "InstanceWriter.h"
-#include "PartitionInstance.h"
+#include "instance_writer.h"
+#include "partition_instance.h"
 
 #include <string>
 

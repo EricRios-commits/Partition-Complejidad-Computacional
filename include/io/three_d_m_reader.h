@@ -1,8 +1,8 @@
 #ifndef PARTITION_INCLUDE_THREE_DM_READER_H_
 #define PARTITION_INCLUDE_THREE_DM_READER_H_
 
-#include "InstanceReader.h"
-#include "ThreeDMInstance.h"
+#include "instance_reader.h"
+#include "three_d_m_instance.h"
 
 #include <string>
 

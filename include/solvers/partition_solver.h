@@ -1,8 +1,8 @@
 #ifndef PARTITION_INCLUDE_PARTITION_SOLVER_H_
 #define PARTITION_INCLUDE_PARTITION_SOLVER_H_
 
-#include "InstanceSolver.h"
-#include "PartitionInstance.h"
+#include "instance_solver.h"
+#include "partition_instance.h"
 
 #include <set>
 #include <string>

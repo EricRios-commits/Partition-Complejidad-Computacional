@@ -1,7 +1,7 @@
 #ifndef PARTITION_INCLUDE_THREE_DM_TO_PARTITION_REDUCER_H_
 #define PARTITION_INCLUDE_THREE_DM_TO_PARTITION_REDUCER_H_
 
-#include "ReductionStrategy.h"
+#include "reduction_strategy.h"
 
 #include <string>
 #include <unordered_map>
