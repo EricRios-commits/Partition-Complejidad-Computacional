@@ -1,6 +1,3 @@
-# Build normally: cmake -B build && cmake --build build
-# Build with strict checks: cmake -B build -DENABLE_TIDY=ON && cmake --build build
-
 cmake_minimum_required(VERSION 3.16)
 project(MyCppProject LANGUAGES CXX)
 
@@ -8,21 +5,20 @@ project(MyCppProject LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Option to enable strict checks (clang-tidy and -Werror)
-option(ENABLE_TIDY "Enable clang-tidy and -Werror for strict code quality checks" OFF)
-
 # Recommended compiler flags for modern C++ (adjust as needed)
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-    if(ENABLE_TIDY)
-        add_compile_options(-Wall -Wextra -Wpedantic -Werror)
-    else()
-        add_compile_options(-Wall -Wextra -Wpedantic)
-    endif()
+    add_compile_options(-Wall -Wextra -Wpedantic -Werror)
 endif()
 
-# Optionally, set clang-tidy for automatic static analysis
-if(ENABLE_TIDY)
-    set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=cppcoreguidelines-*,modernize-*")
+# Optionally enable clang-tidy for automatic static analysis
+option(ENABLE_CLANG_TIDY "Enable clang-tidy static analysis" OFF)
+if(ENABLE_CLANG_TIDY)
+    find_program(CLANG_TIDY_EXE NAMES clang-tidy)
+    if(CLANG_TIDY_EXE)
+        set(CMAKE_CXX_CLANG_TIDY "${CLANG_TIDY_EXE};-checks=cppcoreguidelines-*,modernize-*;--extra-arg-before=--driver-mode=g++")
+    else()
+        message(WARNING "ENABLE_CLANG_TIDY=ON but clang-tidy was not found on PATH. Skipping clang-tidy setup.")
+    endif()
 endif()
 
 # Include directories

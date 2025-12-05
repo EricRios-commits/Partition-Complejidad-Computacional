@@ -18,8 +18,6 @@ namespace partition {
  */
 class ThreeDMToPartitionReducer : public ReductionStrategy {
  public:
-  explicit ThreeDMToPartitionReducer(int64_t base_weight = 1000000);
-
   auto Reduce(const ThreeDMInstance& three_dm) const
       -> PartitionInstance override;
 
@@ -30,7 +28,7 @@ class ThreeDMToPartitionReducer : public ReductionStrategy {
   auto GetDescription() const -> std::string override;
 
  private:
-  auto CalculateWeight(size_t index, size_t dimension) const -> int64_t;
+  auto CalculateWeight(const Triple& triple) const -> uint64_t;
   auto CalculateTripleSize(
       const Triple& triple,
       const std::unordered_map<std::string, size_t>& w_indices,
@@ -43,7 +41,13 @@ class ThreeDMToPartitionReducer : public ReductionStrategy {
                        std::unordered_map<std::string, size_t>& y_indices) const
       -> void;
 
-  int64_t base_weight_;  // Weight assignment parameters.
+  auto CalculateB() const -> uint64_t;
+
+  inline auto Pow2(uint64_t exp) const -> uint64_t {
+    return static_cast<uint64_t>(1) << exp;
+  }
+  size_t q_;
+  uint64_t p_;
   // Mapping from triples to their corresponding partition elements.
   mutable std::unordered_map<std::string, Triple> element_to_triple_map_;
 };

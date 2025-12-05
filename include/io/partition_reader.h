@@ -1,8 +1,8 @@
 #ifndef PARTITION_INCLUDE_PARTITION_READER_H_
 #define PARTITION_INCLUDE_PARTITION_READER_H_
 
-#include "instance_reader.h"
-#include "partition_instance.h"
+#include "../interfaces/instance_reader.h"
+#include "../core/partition_instance.h"
 
 #include <string>
 

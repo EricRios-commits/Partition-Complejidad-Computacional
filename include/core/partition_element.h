@@ -11,19 +11,19 @@ namespace partition {
  */
 class PartitionElement {
  public:
-  PartitionElement(const std::string& id, int64_t size);
+  PartitionElement(const std::string& id, uint64_t size);
 
   auto id() const -> const std::string& { return id_; }
-  auto size() const -> int64_t { return size_; }
+  auto size() const -> uint64_t { return size_; }
 
-  auto operator==(const PartitionElement& other) const -> bool;
-  auto operator!=(const PartitionElement& other) const -> bool;
+  // auto operator==(const PartitionElement& other) const -> bool;
+  // auto operator!=(const PartitionElement& other) const -> bool;
 
   auto ToString() const -> std::string;
 
  private:
   std::string id_;
-  int64_t size_;
+  uint64_t size_;
 };
 
 }  // namespace partition

@@ -11,8 +11,8 @@ namespace partition {
  */
 class Triple {
  public:
-  Triple(const std::string& w, const std::string& x, const std::string& y);
-
+  Triple(const std::string& w, const std::string& x, const std::string& y) : w_(w), x_(x), y_(y) {}
+  
   auto w() const -> const std::string& { return w_; }
   auto x() const -> const std::string& { return x_; }
   auto y() const -> const std::string& { return y_; }
@@ -24,21 +24,20 @@ class Triple {
    */
   auto SharesCoordinateWith(const Triple& other) const -> bool;
 
-  auto operator==(const Triple& other) const -> bool;
-  auto operator!=(const Triple& other) const -> bool;
-
-  /**
-   * @brief Hash functor for use in hash-based containers.
-   */
-  struct Hash {
-    auto operator()(const Triple& t) const -> std::size_t;
-  };
+  auto operator==(const Triple& other) const -> bool {
+    return w_ == other.w_ && x_ == other.x_ && y_ == other.y_;
+  }
+  auto operator!=(const Triple& other) const -> bool {
+    return !(*this == other);
+  }
 
   /**
    * @brief Returns a string representation of the triple.
    * @return String in the format "(w, x, y)".
    */
-  auto ToString() const -> std::string;
+  auto ToString() const -> std::string {
+    return "(" + w_ + ", " + x_ + ", " + y_ + ")";
+  }
 
  private:
   std::string w_;

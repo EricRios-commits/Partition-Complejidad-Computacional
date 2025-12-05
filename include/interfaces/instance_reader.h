@@ -4,6 +4,7 @@
 #include <istream>
 #include <memory>
 #include <string>
+#include <fstream>
 
 namespace partition {
 

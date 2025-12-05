@@ -14,10 +14,10 @@ namespace partition {
  */
 class ThreeDMInstance {
  public:
-  ThreeDMInstance();
   auto SetW(const std::set<std::string>& w) -> void;
   auto SetX(const std::set<std::string>& x) -> void;
   auto SetY(const std::set<std::string>& y) -> void;
+  auto SetQ(size_t q) -> void;
   auto AddTriple(const Triple& triple) -> void;
   auto SetTriples(const std::vector<Triple>& triples) -> void;
 
@@ -33,12 +33,12 @@ class ThreeDMInstance {
    */
   auto IsValid() const -> bool;
 
-  /**
-   * @brief Returns true if a set of triples forms a valid matching.
-   * @param matching The proposed matching to validate.
-   * @return true if valid matching, false otherwise.
-   */
-  auto IsValidMatching(const std::vector<Triple>& matching) const -> bool;
+  // /**
+  //  * @brief Returns true if a set of triples forms a valid matching.
+  //  * @param matching The proposed matching to validate.
+  //  * @return true if valid matching, false otherwise.
+  //  */
+  // auto IsValidMatching(const std::vector<Triple>& matching) const -> bool;
 
   auto ToString() const -> std::string;
 
