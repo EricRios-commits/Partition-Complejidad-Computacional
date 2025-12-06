@@ -41,3 +41,7 @@ build/*
 
 # debug information files
 *.dwo
+
+*/partition_main
+
+.vscode

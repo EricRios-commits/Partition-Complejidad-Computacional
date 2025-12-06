@@ -24,6 +24,8 @@ class ThreeDMReader : public InstanceReader<ThreeDMInstance> {
       -> ThreeDMInstance override;
   auto ReadFromStream(std::istream& input) const -> ThreeDMInstance override;
   auto GetFormatDescription() const -> std::string override;
+ private:
+  auto FillSetFromLine(std::istream& input, std::set<std::string>& elements, size_t q, const std::string& set_name) const -> void;
 };
 
 }  // namespace partition

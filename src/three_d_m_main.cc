@@ -6,9 +6,9 @@
 
 #include <iostream>
 
-int main() {
+int main(int argc, char* argv[]) {
   partition::ThreeDMReader reader;
-  std::ifstream input("../instances/3DM/3dm-1.txt");
+  std::ifstream input(argv[1]);
   partition::ThreeDMInstance instance = reader.ReadFromStream(input);
 
   std::cout << "3D-Matching Instance:" << std::endl;
