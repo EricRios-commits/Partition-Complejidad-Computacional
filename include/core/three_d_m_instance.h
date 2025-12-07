@@ -1,7 +1,7 @@
 #ifndef PARTITION_INCLUDE_THREE_DM_INSTANCE_H_
 #define PARTITION_INCLUDE_THREE_DM_INSTANCE_H_
 
-#include "triple.h"
+#include "core/triple.h"
 
 #include <set>
 #include <string>

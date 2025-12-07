@@ -1,4 +1,4 @@
-#include "../../include/io/partition_reader.h"
+#include "io/partition_reader.h"
 #include <sstream>
 
 namespace partition {

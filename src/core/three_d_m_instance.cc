@@ -1,6 +1,7 @@
+#include "core/three_d_m_instance.h"
 #include <iostream>
+
 namespace partition {
-  #include "../../include/core/three_d_m_instance.h"
 
   auto ThreeDMInstance::SetQ(size_t q) -> void {
     q_ = q;
@@ -45,7 +46,7 @@ namespace partition {
     }
     instance_info += "\n";
     std::cout << "M size: " << m_.size() << "\n";
-    for (int i{0}; i < m_.size(); ++i) {
+    for (std::size_t i{0}; i < m_.size(); ++i) {
       instance_info += m_[i].ToString() + "\n";
     }
     return instance_info;

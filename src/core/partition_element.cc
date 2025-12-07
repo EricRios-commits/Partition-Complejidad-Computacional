@@ -1,4 +1,4 @@
-#include "../../include/core/partition_element.h"
+#include "core/partition_element.h"
 
 namespace partition {
 

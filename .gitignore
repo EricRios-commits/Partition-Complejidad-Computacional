@@ -1,5 +1,7 @@
 build/*
 
+a.out
+
 # Prerequisites
 *.d
 

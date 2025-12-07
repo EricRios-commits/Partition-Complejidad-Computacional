@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
-#include "./io/three_d_m_reader.cc"
-#include "./io/partition_writer.cc"
+#include <fstream>
+#include "io/three_d_m_reader.h"
+#include "io/partition_writer.h"
 
 int main() {
     partition::ThreeDMReader reader;
@@ -27,6 +28,6 @@ int main() {
 
     partition::PartitionWriter writer;
     std::ofstream output("../instances/partition/output_partition.txt");
-    writer.WriteToStream(instance, output);
+    // writer.WriteToStream(instance, output);
     return 0;
 }

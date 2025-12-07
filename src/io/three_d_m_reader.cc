@@ -1,10 +1,8 @@
 
+#include "io/three_d_m_reader.h"
+#include "core/three_d_m_instance.h"
 #include <fstream>
 #include <sstream>
-
-#include "../../include/io/three_d_m_reader.h"
-#include "../../include/core/three_d_m_instance.h"
-#include "../core/three_d_m_instance.cc"
 
 namespace partition {
   auto ThreeDMReader::ReadFromFile(const std::string& filename) const -> ThreeDMInstance {

@@ -3,8 +3,8 @@
 
 #include <string>
 
-#include "../interfaces/instance_reader.h"
-#include "../core/three_d_m_instance.h"
+#include "interfaces/instance_reader.h"
+#include "core/three_d_m_instance.h"
 
 namespace partition {
 

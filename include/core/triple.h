@@ -1,7 +1,6 @@
 #ifndef PARTITION_INCLUDE_TRIPLE_H_
 #define PARTITION_INCLUDE_TRIPLE_H_
 
-#include <functional>
 #include <string>
 
 namespace partition {
@@ -24,20 +23,14 @@ class Triple {
    */
   auto SharesCoordinateWith(const Triple& other) const -> bool;
 
-  auto operator==(const Triple& other) const -> bool {
-    return w_ == other.w_ && x_ == other.x_ && y_ == other.y_;
-  }
-  auto operator!=(const Triple& other) const -> bool {
-    return !(*this == other);
-  }
+  auto operator==(const Triple& other) const -> bool;
+  auto operator!=(const Triple& other) const -> bool;
 
   /**
    * @brief Returns a string representation of the triple.
    * @return String in the format "(w, x, y)".
    */
-  auto ToString() const -> std::string {
-    return "(" + w_ + ", " + x_ + ", " + y_ + ")";
-  }
+  auto ToString() const -> std::string;
 
  private:
   std::string w_;

@@ -1,5 +1,5 @@
-#include "../../include/io/three_d_m_writer.h"
-#include "../../include/core/three_d_m_instance.h"
+#include "io/three_d_m_writer.h"
+#include "core/three_d_m_instance.h"
 
 #include <fstream>
 

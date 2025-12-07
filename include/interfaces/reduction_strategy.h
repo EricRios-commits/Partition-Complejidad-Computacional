@@ -1,9 +1,9 @@
 #ifndef PARTITION_INCLUDE_REDUCTION_STRATEGY_H_
 #define PARTITION_INCLUDE_REDUCTION_STRATEGY_H_
 
-#include "partition_instance.h"
-#include "three_d_m_instance.h"
-#include "triple.h"
+#include "core/partition_instance.h"
+#include "core/three_d_m_instance.h"
+#include "core/triple.h"
 
 #include <memory>
 #include <set>

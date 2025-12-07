@@ -1,7 +1,7 @@
 #ifndef PARTITION_INCLUDE_THREE_DM_TO_PARTITION_REDUCER_H_
 #define PARTITION_INCLUDE_THREE_DM_TO_PARTITION_REDUCER_H_
 
-#include "reduction_strategy.h"
+#include "interfaces/reduction_strategy.h"
 
 #include <string>
 #include <unordered_map>
@@ -29,27 +29,19 @@ class ThreeDMToPartitionReducer : public ReductionStrategy {
 
  private:
   auto CalculateWeight(const Triple& triple) const -> uint64_t;
-  auto CalculateTripleSize(
-      const Triple& triple,
-      const std::unordered_map<std::string, size_t>& w_indices,
-      const std::unordered_map<std::string, size_t>& x_indices,
-      const std::unordered_map<std::string, size_t>& y_indices) const
-      -> int64_t;
-  auto CreateIndexMaps(const ThreeDMInstance& three_dm,
-                       std::unordered_map<std::string, size_t>& w_indices,
-                       std::unordered_map<std::string, size_t>& x_indices,
-                       std::unordered_map<std::string, size_t>& y_indices) const
-      -> void;
+  auto CreateIndexMaps(const ThreeDMInstance& three_dm) const -> void;
 
   auto CalculateB() const -> uint64_t;
 
   inline auto Pow2(uint64_t exp) const -> uint64_t {
     return static_cast<uint64_t>(1) << exp;
   }
-  size_t q_;
-  uint64_t p_;
-  // Mapping from triples to their corresponding partition elements.
-  mutable std::unordered_map<std::string, Triple> element_to_triple_map_;
+  mutable size_t q_;
+  mutable uint64_t p_;
+  // Index maps for W, X, Y elements
+  mutable std::unordered_map<std::string, size_t> w_indices_;
+  mutable std::unordered_map<std::string, size_t> x_indices_;
+  mutable std::unordered_map<std::string, size_t> y_indices_;
 };
 
 }  // namespace partition

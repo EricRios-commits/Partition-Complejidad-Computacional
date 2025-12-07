@@ -1,7 +1,7 @@
 #ifndef PARTITION_INCLUDE_PARTITION_INSTANCE_H_
 #define PARTITION_INCLUDE_PARTITION_INSTANCE_H_
 
-#include "partition_element.h"
+#include "core/partition_element.h"
 
 #include <set>
 #include <string>
