@@ -20,12 +20,25 @@ namespace partition {
     std::ostringstream oss;
     oss << "Partition Instance:\n";
     oss << elements_.size() << " elements.\n";
-    oss << "Total sum: " << total_sum_ << '\n';
+    oss << "Total sum: " << total_sum_ << " (binary: " << ToBinaryString(total_sum_) << ")\n";
     oss << "Elements:\n";
     for (const auto& elem : elements_) {
-      oss << "  " << elem.ToString() << '\n';
+      oss << "  " << elem.ToString() << " (binary: " << ToBinaryString(elem.size()) << ")\n";
     }
     return oss.str();
+  }
+
+  auto PartitionInstance::ToBinaryString(uint64_t value) const -> std::string {
+    if (value == 0) {
+      return "0";
+    }
+    std::string binary;
+    uint64_t temp = value;
+    while (temp > 0) {
+      binary = (temp % 2 == 0 ? '0' : '1') + binary;
+      temp /= 2;
+    }
+    return binary;
   }
 
   auto PartitionInstance::RecalculateTotalSum() -> void {

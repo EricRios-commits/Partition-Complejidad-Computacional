@@ -14,8 +14,8 @@ auto ThreeDMToPartitionReducer::Reduce(const ThreeDMInstance& three_dm) const
   // create index maps
   CreateIndexMaps(three_dm);
   for (size_t i{0}; i < k; ++i) {
-    elements.push_back(
-        PartitionElement("a_" + std::to_string(i), CalculateWeight(three_dm.triples()[i])));
+    elements.push_back(PartitionElement(
+        "a_" + std::to_string(i), CalculateWeight(three_dm.triples()[i])));
   }
   auto total_weight = uint64_t{0};
   for (const auto& element : elements) {
@@ -35,17 +35,17 @@ auto ThreeDMToPartitionReducer::CreateIndexMaps(
   w_indices_.clear();
   x_indices_.clear();
   y_indices_.clear();
-  
+
   size_t index = 1;
   for (const auto& w_elem : three_dm.w()) {
     w_indices_[w_elem] = index++;
   }
-  
+
   index = 1;
   for (const auto& x_elem : three_dm.x()) {
     x_indices_[x_elem] = index++;
   }
-  
+
   index = 1;
   for (const auto& y_elem : three_dm.y()) {
     y_indices_[y_elem] = index++;

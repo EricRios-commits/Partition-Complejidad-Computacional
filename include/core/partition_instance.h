@@ -55,6 +55,7 @@ class PartitionInstance {
 
  private:
   auto RecalculateTotalSum() -> void;
+  auto ToBinaryString(uint64_t value) const -> std::string;
   
   std::vector<PartitionElement> elements_;
   int64_t total_sum_;
