@@ -1,6 +1,7 @@
 #include "reduction/three_d_m_to_partition_reducer.h"
 
 #include <cmath>
+#include <iostream>
 
 namespace partition {
 
@@ -27,6 +28,7 @@ auto ThreeDMToPartitionReducer::Reduce(const ThreeDMInstance& three_dm) const
   elements.push_back(PartitionElement("b1", b1));
   elements.push_back(PartitionElement("b2", b2));
   partition_instance.SetElements(elements);
+  partition_instance.SetBinaryDisplayWidth(3 * q_ * p_);
   return partition_instance;
 }
 
@@ -57,8 +59,8 @@ auto ThreeDMToPartitionReducer::CalculateWeight(const Triple& triple) const
   auto w_index = w_indices_.at(triple.w());
   auto x_index = x_indices_.at(triple.x());
   auto y_index = y_indices_.at(triple.y());
-  auto w_part = Pow2(3 * p_ * (q_ - w_index));
-  auto x_part = Pow2(2 * p_ * (q_ - x_index));
+  auto w_part = Pow2(2 * q_ * p_ + p_ * (q_ - w_index));
+  auto x_part = Pow2(q_ * p_ + p_ * (q_ - x_index));
   auto y_part = Pow2(p_ * (q_ - y_index));
   return w_part + x_part + y_part;
 }

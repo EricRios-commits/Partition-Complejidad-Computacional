@@ -20,23 +20,31 @@ namespace partition {
     std::ostringstream oss;
     oss << "Partition Instance:\n";
     oss << elements_.size() << " elements.\n";
-    oss << "Total sum: " << total_sum_ << " (binary: " << ToBinaryString(total_sum_) << ")\n";
+    oss << "Total sum: " << total_sum_ << " (binary: " << ToBinaryString(total_sum_, binary_display_width_) << ")\n";
     oss << "Elements:\n";
     for (const auto& elem : elements_) {
-      oss << "  " << elem.ToString() << " (binary: " << ToBinaryString(elem.size()) << ")\n";
+      oss << "  " << elem.ToString() << " (binary: " << ToBinaryString(elem.size(), binary_display_width_) << ")\n";
     }
     return oss.str();
   }
 
-  auto PartitionInstance::ToBinaryString(uint64_t value) const -> std::string {
+  auto PartitionInstance::ToBinaryString(uint64_t value, size_t min_width) const -> std::string {
     if (value == 0) {
-      return "0";
+      std::string result = "0";
+      if (min_width > 1) {
+        result = std::string(min_width - 1, '0') + result;
+      }
+      return result;
     }
     std::string binary;
     uint64_t temp = value;
     while (temp > 0) {
       binary = (temp % 2 == 0 ? '0' : '1') + binary;
       temp /= 2;
+    }
+    // Pad with leading zeros if needed
+    if (binary.length() < min_width) {
+      binary = std::string(min_width - binary.length(), '0') + binary;
     }
     return binary;
   }

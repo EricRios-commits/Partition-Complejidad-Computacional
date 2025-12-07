@@ -26,6 +26,8 @@ class PartitionInstance {
 
   auto SetElements(const std::vector<PartitionElement>& elements) -> void;
 
+  auto SetBinaryDisplayWidth(size_t width) -> void { binary_display_width_ = width; }
+
   /**
    * @name Getters
    * Methods for accessing instance data.
@@ -55,10 +57,11 @@ class PartitionInstance {
 
  private:
   auto RecalculateTotalSum() -> void;
-  auto ToBinaryString(uint64_t value) const -> std::string;
+  auto ToBinaryString(uint64_t value, size_t min_width = 0) const -> std::string;
   
   std::vector<PartitionElement> elements_;
   int64_t total_sum_;
+  size_t binary_display_width_ = 0;
 };
 
 }  // namespace partition
