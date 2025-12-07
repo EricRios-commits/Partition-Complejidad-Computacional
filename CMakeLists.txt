@@ -15,10 +15,13 @@ include_directories(include)
 
 # Automatically find all source files
 file(GLOB SOURCES
-    src/*.cc
-    src/*/*.cc
-    src/*/*/*.cc
+    src/core/*.cc
+    src/io/*.cc
+    src/reduction/*.cc
 )
 
-# Add the executable target
-add_executable(partition ${SOURCES})
+# Add the executable target for reduction test
+add_executable(reduction_test 
+    src/reduction_test_main.cc
+    ${SOURCES}
+)

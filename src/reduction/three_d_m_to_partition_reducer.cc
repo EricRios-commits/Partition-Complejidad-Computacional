@@ -18,7 +18,7 @@ auto ThreeDMToPartitionReducer::Reduce(const ThreeDMInstance& three_dm) const
         PartitionElement("a_" + std::to_string(i), CalculateWeight(three_dm.triples()[i])));
   }
   auto total_weight = uint64_t{0};
-  for (const auto& element : partition_instance.elements()) {
+  for (const auto& element : elements) {
     total_weight += element.size();
   }
   auto B = CalculateB();
