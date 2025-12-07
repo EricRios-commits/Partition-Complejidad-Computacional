@@ -22,6 +22,6 @@ file(GLOB SOURCES
 
 # Add the executable target for reduction test
 add_executable(reduction_test 
-    src/reduction_test_main.cc
+    src/interactive_shell_main.cc
     ${SOURCES}
 )

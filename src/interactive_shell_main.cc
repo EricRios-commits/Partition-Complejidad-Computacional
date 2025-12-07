@@ -1,8 +1,11 @@
+#include "io/three_d_m_reader.h"
+#include "io/three_d_m_writer.h"
+#include "reduction/three_d_m_to_partition_reducer.h"
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "io/three_d_m_reader.h"
-#include "io/partition_writer.h"
+
+
 
 int main() {
     partition::ThreeDMReader reader;
@@ -18,16 +21,14 @@ int main() {
         }
         break;
     }
-    partition::ThreeDMInstance instance = reader.ReadFromFile(filename);
+    
+    partition::ThreeDMInstance three_dm_instance = reader.ReadFromFile(filename);
+    std::cout << "=== ORIGINAL 3DM INSTANCE ===" << std::endl;
+    std::cout << three_dm_instance.ToString() << std::endl;
+    partition::ThreeDMToPartitionReducer reducer;
+    partition::PartitionInstance partition_instance = reducer.Reduce(three_dm_instance);
+    std::cout << "\n=== CONVERTED PARTITION INSTANCE ===" << std::endl;
+    std::cout << partition_instance.ToString() << std::endl;
 
-    std::cout << "3D-Matching Instance:" << std::endl;
-    std::cout << instance.ToString() << std::endl;
-
-
-    //Reduccion
-
-    partition::PartitionWriter writer;
-    std::ofstream output("../instances/partition/output_partition.txt");
-    // writer.WriteToStream(instance, output);
     return 0;
 }

@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
   
   if (input_file.empty()) {
     std::cerr << "Usage: " << argv[0] << " -i <input_file>\n";
-    std::cerr << "Example: " << argv[0] << " -i instances/3DM/3dm-1.txt\n";
+    std::cerr << "Example: " << argv[0] << " -i ../instances/3DM/3dm-1.txt\n";
     return 1;
   }
   
