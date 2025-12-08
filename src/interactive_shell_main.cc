@@ -50,7 +50,9 @@ int main(int argc, char* argv[]) {
         std::cout << "------------------------------------------" << std::endl;
         std::cout << "No input file provided via command line." << std::endl << std::endl;
         std::cout << "Tip: You can also run:" << std::endl;
-        std::cout << "  " << argv[0] << " -i <input_file> -o <output_file>" << std::endl << std::endl;
+        std::cout << "  " << argv[0] << " -i <input_file> -o <output_file>" << std::endl;
+        std::cout << "  " << argv[0] << " -h or --help for usage instructions" << std::endl << std::endl;
+
 
         while (true) {
             std::cout << "Enter the path to the 3DM instance file: ";
