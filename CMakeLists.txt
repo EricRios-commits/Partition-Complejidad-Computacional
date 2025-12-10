@@ -21,7 +21,7 @@ file(GLOB SOURCES
 )
 
 # Add the executable target for reduction test
-add_executable(reduction_test 
+add_executable(3dm_to_partition 
     src/interactive_shell_main.cc
     ${SOURCES}
 )

@@ -1,0 +1,3 @@
+/home/wireshark/compl_compu_trabajo/CMakeFiles/3dm_to_partition.dir
+/home/wireshark/compl_compu_trabajo/CMakeFiles/edit_cache.dir
+/home/wireshark/compl_compu_trabajo/CMakeFiles/rebuild_cache.dir
