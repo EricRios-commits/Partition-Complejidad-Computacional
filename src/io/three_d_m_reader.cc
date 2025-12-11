@@ -1,4 +1,13 @@
-
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Complejidad computacional
+ *
+ * @brief Implementation file for ThreeDMWriter.
+ * @authors Fabián González Lence, Diego Hernández Chico, Enmanuel Vegas Acosta, Luis David Romero Romero, Eric Ríos Hamilton
+ * @date 11-12-2025
+ */
 #include "io/three_d_m_reader.h"
 #include "core/three_d_m_instance.h"
 #include <fstream>

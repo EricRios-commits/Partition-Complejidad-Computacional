@@ -1,3 +1,14 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Complejidad computacional
+ *
+ * @brief Implementation file for Triple.
+ * @authors Fabián González Lence, Diego Hernández Chico, Enmanuel Vegas Acosta, Luis David Romero Romero, Eric Ríos Hamilton
+ * @date 11-12-2025
+ */
+
 #include "core/triple.h"
 
 namespace partition {

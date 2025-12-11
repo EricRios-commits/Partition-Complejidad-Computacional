@@ -1,6 +1,17 @@
 #ifndef PARTITION_INCLUDE_REDUCTION_STRATEGY_H_
 #define PARTITION_INCLUDE_REDUCTION_STRATEGY_H_
 
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Complejidad computacional
+ *
+ * @brief Header file for the ReductionStrategy interface.
+ * @authors Fabián González Lence, Diego Hernández Chico, Enmanuel Vegas Acosta, Luis David Romero Romero, Eric Ríos Hamilton
+ * @date 11-12-2025
+ */
+
 #include "core/partition_instance.h"
 #include "core/three_d_m_instance.h"
 #include "core/triple.h"

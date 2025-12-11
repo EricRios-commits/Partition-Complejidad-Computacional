@@ -1,7 +1,18 @@
-#ifndef PARTITION_INCLUDE_THREE_DM_READER_H_
-#define PARTITION_INCLUDE_THREE_DM_READER_H_
+#ifndef PARTITION_INCLUDE_THREE_D_M_READER_H_
+#define PARTITION_INCLUDE_THREE_D_M_READER_H_
 
-#include <string>
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Complejidad computacional
+ *
+ * @brief Header file for the ThreeDMReader.
+ * @authors Fabián González Lence, Diego Hernández Chico, Enmanuel Vegas Acosta, Luis David Romero Romero, Eric Ríos Hamilton
+ * @date 11-12-2025
+ */
+
+#include <istream>
 
 #include "interfaces/instance_reader.h"
 #include "core/three_d_m_instance.h"

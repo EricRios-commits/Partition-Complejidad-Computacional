@@ -1,8 +1,20 @@
-#ifndef PARTITION_INCLUDE_THREE_DM_WRITER_H_
-#define PARTITION_INCLUDE_THREE_DM_WRITER_H_
+#ifndef PARTITION_INCLUDE_THREE_D_M_WRITER_H_
+#define PARTITION_INCLUDE_THREE_D_M_WRITER_H_
 
-#include "interfaces/instance_writer.h"
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Complejidad computacional
+ *
+ * @brief Header file for the ThreeDMWriter.
+ * @authors Fabián González Lence, Diego Hernández Chico, Enmanuel Vegas Acosta, Luis David Romero Romero, Eric Ríos Hamilton
+ * @date 11-12-2025
+ */
+
+#include <ostream>
 #include "core/three_d_m_instance.h"
+#include "interfaces/instance_writer.h"
 
 #include <string>
 

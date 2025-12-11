@@ -1,6 +1,17 @@
 #ifndef PARTITION_INCLUDE_PARTITION_INSTANCE_H_
 #define PARTITION_INCLUDE_PARTITION_INSTANCE_H_
 
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Complejidad computacional
+ *
+ * @brief Header file for the PartitionInstance class.
+ * @authors Fabián González Lence, Diego Hernández Chico, Enmanuel Vegas Acosta, Luis David Romero Romero, Eric Ríos Hamilton
+ * @date 11-12-2025
+ */
+
 #include "core/partition_element.h"
 
 #include <set>
