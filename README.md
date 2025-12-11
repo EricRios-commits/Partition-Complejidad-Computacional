@@ -1,4 +1,6 @@
-# Program essentials:
+# 3DM to Partition - Complejidad Computacional: Grupo 3
+
+## Compile and Run
 
 ### How to build:
 ```
@@ -17,5 +19,5 @@ make
 
 ---
 
-### Access to the documentation.
+### Access to the full documentation.
 To access the documentation click [here](DOCUMENTATION.md).
