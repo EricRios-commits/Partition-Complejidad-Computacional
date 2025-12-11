@@ -1,3 +1,26 @@
+# Ignore CMake and build artifacts
+# CMake cache and files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Build directories
+/build/
+
+# Common compiled objects and outputs
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+
+# IDE/editor files
+.vscode/
+.idea/
 build/*
 CMakeFiles/*
 3dm_to_partition
