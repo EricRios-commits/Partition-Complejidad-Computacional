@@ -828,7 +828,6 @@ classDiagram
     ReductionPipeline ..> Triple : uses
     ReductionPipeline "1" o-- "1" InstanceReader~ThreeDMInstance~ : uses
     ReductionPipeline "1" o-- "1" InstanceWriter~PartitionInstance~ : uses
-    ReductionPipeline "1" o-- "1" InstanceSolver~PartitionInstance, set~string~~ : uses
 ```
 
 ---
