@@ -1,4 +1,6 @@
 build/*
+CMakeFiles/*
+3dm_to_partition
 
 a.out
 

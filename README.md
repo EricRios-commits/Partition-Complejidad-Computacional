@@ -9,5 +9,5 @@ make
 
 How to run:
 ```
-./partition
+./3dm_to_partition
 ```

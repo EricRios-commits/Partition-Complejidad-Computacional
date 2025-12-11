@@ -68,9 +68,10 @@ auto ThreeDMToPartitionReducer::CalculateWeight(const Triple& triple) const
 auto ThreeDMToPartitionReducer::CalculateB() const -> uint64_t {
   size_t upper = 3 * q_ - 1;
   auto B = uint64_t{0};
-  for (size_t i{0}; i < upper; ++i) {
+  for (size_t i{0}; i <= upper; ++i) {
     B += Pow2(p_ * i);
   }
+  std::cout << "B: " << B << std::endl;
   return B;
 }
 

@@ -7,9 +7,6 @@ namespace partition {
                                     const std::string& filename) const
       -> void {
     std::ofstream file_stream(filename);
-    if (!file_stream.is_open()) {
-      throw std::runtime_error("Could not open file: " + filename);
-    }
     WriteToStream(instance, file_stream);
     return;
   }
